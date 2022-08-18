@@ -13,6 +13,9 @@
 
 本项目代码仅供个人学习交流与软件使用者的协助更新与BUG报告。
 
+另外，这里有盲盒拍卖会MOD制作的经验分享  
+[MOD-CodeSharing: 盲盒拍卖会的MOD制作经验分享（包含部分代码）](https://github.com/ice-forever/MOD-CodeSharing)
+
 <h2>TO DO LIST/Pull requests说明</h2>
 以下为可能的更新方向。期待有大佬的Pull requests的帮助。
 
