@@ -33,3 +33,6 @@ BUG   |对于缺失的成就ID，识别已解锁成就的部分代码流程不�
 - 不建议添加非QT的头文件
 - 建议使用较复杂的类名，并尽量增强代码可读性
 - 如果更改MODmenu类的界面，必须将组件放置在布局管理器中
+
+
+![ice-forever](https://count.getloli.com/get/@:ice-forever?theme=rule34)
