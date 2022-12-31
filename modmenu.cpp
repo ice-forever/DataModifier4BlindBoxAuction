@@ -461,10 +461,10 @@ void MODmenu::on_pushButton_clicked()
 #define JIETI_1 1000000
 #define JIETI_2 5000000
 #define JIETI_3 10000000
-#define XISHU_0 2//50%
-#define XISHU_1 4//25%
-#define XISHU_2 8//12.5%
-#define XISHU_3 10//10%
+#define XISHU_0 1//100%
+#define XISHU_1 2//50%
+#define XISHU_2 4//25%
+#define XISHU_3 8//12.5%
 int jietijiesuan(int source)
 {
 
