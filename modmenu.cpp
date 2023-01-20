@@ -3,9 +3,9 @@
 
 typedef struct
 {
-    int uid;
+    qlonglong uid;
     QString name;
-    int score;
+    qlonglong score;
     int use;
     bool *get;
     int level;
@@ -120,9 +120,9 @@ void MODmenu::on_readfile_clicked()
     for(int i=0; i<jArr1.size(); i++)
     {
         temp1=jArr1[i].toObject();
-        usertemp.uid=temp1["UID"].toInt();
+        usertemp.uid=(qlonglong)(temp1["UID"].toDouble());
         usertemp.name=temp1["名称"].toString();
-        usertemp.score=temp1["积分"].toInt();
+        usertemp.score=(qlonglong)temp1["积分"].toDouble();
         usertemp.get=new bool [numberofachievement];
         for(int m=0; m<numberofachievement; m++)usertemp.get[m]=false;
 
@@ -133,7 +133,7 @@ void MODmenu::on_readfile_clicked()
     for(int i=0; i<jArr2.size(); i++)
     {
         temp1=jArr2[i].toObject();
-        int uid=temp1["UID"].toInt();
+        qlonglong uid=(qlonglong)(temp1["UID"].toDouble());
         for(int j=0; j<datamodvector.size(); j++)
         {
             if(uid==datamodvector[j].uid)
@@ -154,7 +154,7 @@ void MODmenu::on_readfile_clicked()
     for(int i=0; i<jArr3.size(); i++)
     {
         temp1=jArr3[i].toObject();
-        int uid=temp1["UID"].toInt();
+        qlonglong uid=(qlonglong)(temp1["UID"].toDouble());
         for(int j=0; j<datamodvector.size(); j++)
         {
             if(uid==datamodvector[j].uid)
@@ -508,7 +508,7 @@ void MODmenu::on_calculate_clicked()
 }
 
 
-int MODmenu::uidFindLocation(int uid)
+int MODmenu::uidFindLocation(qlonglong uid)
 {
     for(int i=0; i<datamodvector.size(); i++)
     {
@@ -573,12 +573,13 @@ void MODmenu::on_inputdataba_clicked()
 
         }
 
-        int local=uidFindLocation(part[0].toInt());
+        int local;
+        local=uidFindLocation(part[0].toLongLong());
 
         if(local<0)
         {
             USERDATAwithMOD newuser;
-            newuser.uid=part[0].toInt();
+            newuser.uid=part[0].toLongLong();
             newuser.name=part[1];
             newuser.score=part[2].toInt();
             newuser.use=part[3].toInt();

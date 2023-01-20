@@ -36,3 +36,10 @@ BUG   |对于缺失的成就ID，识别已解锁成就的部分代码流程不�
 
 
 ![ice-forever](https://count.getloli.com/get/@:ice-forever?theme=rule34)
+
+
+# 更新历史
+
+更新日期  |更新内容
+---   | ---
+20230120| 修改uid类型为qlonglong，解决了过长uid用户数据读取错误的问题

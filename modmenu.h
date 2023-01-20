@@ -33,7 +33,7 @@ public:
     explicit MODmenu(QWidget *parent = nullptr);
     ~MODmenu();
     void flashtablefromvector();
-    int uidFindLocation(int uid);
+    int uidFindLocation(qlonglong uid);
     void savejson();
     void checkfirstrun();
     helpmenu *help;
